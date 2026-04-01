@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  
+  --color-electric-blue: #0ea5e9;
+  --color-neon-purple: #a855f7;
+  
+  --font-sans: var(--font-geist-sans), Inter, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+@layer base {
+  /* Minimal globals */
+}
+
+body {
+  @apply bg-zinc-50 text-zinc-900 selection:bg-neon-purple/30 selection:text-neon-purple font-sans antialiased transition-colors duration-300;
+  min-height: 100vh;
+}
+
+.dark body {
+  @apply bg-zinc-950 text-zinc-50;
+  color-scheme: dark;
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* Bento Card Base Utility */
+.bento-card {
+  @apply rounded-[2rem] border p-6 transition-all duration-300;
+  @apply bg-white border-zinc-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)];
+  @apply dark:bg-zinc-900/50 dark:border-zinc-800 dark:shadow-none;
+}
+
+.bento-card:hover {
+  @apply scale-[0.99] border-zinc-300 dark:border-zinc-700;
+}
+
+/* Custom Scrollbar Utility - Matching the Core Design Theme */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-zinc-200 dark:bg-zinc-800 rounded-full transition-colors duration-500;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-400 dark:bg-zinc-500;
+  }
+
+  /* Global Body Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #e4e4e7; /* zinc-200 */
+    border: 3px solid #fafafa;
+    border-radius: 10px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #27272a; /* zinc-800 */
+    border: 3px solid #050505;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a1a1aa; /* zinc-400 */
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46; /* zinc-700 */
+  }
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-black/70 backdrop-blur-xl border border-zinc-200/50 dark:border-white/10;
+}
