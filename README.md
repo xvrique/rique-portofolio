@@ -1,4 +1,4 @@
-# >_ Kodawari Portfolio (v2.0)
+# XV Kodawari Portfolio (v2.0)
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -11,7 +11,7 @@ A high-fidelity, monochromatic personal portfolio built with **Next.js 15**, **T
 
 ---
 
-## 🏗️ Architectural Core
+## Architectural Core
 
 - **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) with a custom Monochromatic Design System.
@@ -19,7 +19,7 @@ A high-fidelity, monochromatic personal portfolio built with **Next.js 15**, **T
 - **Backend:** Serverless architecture with **GitHub API** integration for real-time repository tracking.
 - **Localization:** Custom high-fidelity context-based provider for **EN/JP** support.
 
-## ✨ Key Features
+## Key Features
 
 - **The Architect Terminal:** An interactive, simulated OS interface mimicking a high-end developer environment.
 - **Bento Grid Layout:** Harmonious data organization inspired by modern hardware design principles.
@@ -27,7 +27,7 @@ A high-fidelity, monochromatic personal portfolio built with **Next.js 15**, **T
 - **Performance Optimized:** Achieving near-perfect Lighthouse scores through ISR (Incremental Static Regeneration) and asset optimization.
 - **Dark Mode Native:** A deep zinc-based system designed for precision and visual comfort.
 
-## 🚀 Deployment
+## Deployment
 
 This project is optimized for deployment on **Vercel**.
 
@@ -44,7 +44,7 @@ npm run dev
 
 ---
 
-## 🎨 Design Philosophy
+## Design Philosophy
 
 The project follows the **Kodawari** philosophy: where invisible details define the soul of the product. From custom scrollbars that adapt to the dark mode context to the precise grid spacing, every pixel is architecturally justified.
 
